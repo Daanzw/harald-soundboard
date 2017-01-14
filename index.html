@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="icon" href="assets/helm.png">
+	<title>harry</title>
+	<style type="text/css">
+		/* ===========================================
+		style
+		=========================================== */
+
+
+		/*Custom reset*/
+
+		html {
+			font-size: 6.25px;
+			height:100%;
+
+
+		  
+		}
+		body,html{
+			font-family: "Open Sans",Arial;
+			max-width: 100%;
+			overflow-x: hidden; 
+			min-height:100%;
+		}
+
+		* {
+			margin: 0; 
+			padding: 0; 
+			-webkit-box-sizing: border-box; 
+			-moz-box-sizing: border-box;
+			-ms-box-sizing: border-box;
+			-o-box-sizing: border-box;
+			box-sizing: border-box;
+		}
+
+		/*Helpers*/
+
+		.structural {
+			position: absolute;
+			left: -9999px;
+		}
+
+		.clearfix:after {
+			content: "";
+			display: table;
+			clear: both;
+		}
+
+		.ir {
+			display: block;
+			text-indent: 100%;
+			white-space: nowrap;
+			overflow: hidden;
+		}
+
+		.hidden {
+			position: absolute !important;
+			visibility: hidden !important;
+			z-index: -1 !important;
+		}
+
+		body > * {
+			font-size: 12px;
+			line-height: 18px;
+		}
+		/*Wrappers*/
+
+		.wrapper {
+			min-width: 320px;
+			max-width: 960px;
+			padding: 0 0;
+			margin: 0 auto;
+		}
+	</style>
+	<style type="text/css">
+
+		#video{
+			width: 90%;
+			margin-left: 5%;
+			float: left;
+			margin-top: 20px;
+			}
+			.btn{
+				color: #fff;
+				background-color: #87704b;
+				padding:20px 0px;
+				text-decoration: none;
+				float: left;
+				width: 88%;
+				margin-left: 6%;
+				margin-top: 20px;
+				text-align: center;
+				font-size: 14px;
+
+			}
+
+		@media screen and (min-width: 500px) {
+	
+			#video{
+			width: 60%;
+			margin-left: 15%;
+		
+			}
+			.btn{
+				
+				width: 58%;
+				margin-left: 16%;
+				
+
+			}
+
+		}
+		@media screen and (min-width: 800px) {
+
+	 		#video{
+				width: 30%;
+				margin-left: 35%;
+				
+			}
+			.btn{
+				
+				width: 28%;
+				margin-left: 36%;
+				
+
+			}
+
+		}
+
+
+		
+	</style>
+</head>
+<body>
+<video  id="video" src="" poster="assets/harry.jpg" type="video/mp4"></video>
+<audio id="audio" src="" type="audio/mp3"></audio>
+
+<a  href="#" class="btn" source="vergaderinggemist" >"hebbekik hier ergens een vergadering gemist?"</a>
+<a  href="#" class="btn" source="wereldwijdeweb" >"Het wereldwijde web. Da's wel iedereen he, Randy"</a>
+<a  href="#" class="btn" source="welwelwel" >"Wel, wel, wel, ..."</a>
+<a  href="#" class="btn" source="ditisdeochtenderectie" >"Dit is de ochtenderectie..."</a>
+
+
+<script type="text/javascript" src="assets/jquery-3.1.1.min.js"></script>
+
+<script type="text/javascript" >
+
+	$('.btn').on( 'click',function(e){
+	
+		$('#audio').attr('src',"assets/"+$(this).attr("source")+".mp3" )
+		$('#video').attr('src',"assets/"+$(this).attr("source")+".mp4" )
+		$("#audio")[0].play();
+		$('#video')[0].play();
+	});
+	
+		
+		
+	
+	
+</script>
+</body>
+</html>
